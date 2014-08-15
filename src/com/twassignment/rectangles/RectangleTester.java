@@ -13,11 +13,11 @@ public class RectangleTester {
         //Create 5 new rectangles
         Rectangle[] rectangles = new Rectangle[5];
 
-        //Initialize each rectangle
+        //Initialize each rectangle. Dimensions should be at least 1.
         for (int i = 0; i < rectangles.length; i = i + 1) {
             rectangles[i] = new Rectangle();
-            rectangles[i].height = (int)(Math.random() * SCALE_FACTOR);
-            rectangles[i].width = (int)(Math.random() * SCALE_FACTOR);
+            rectangles[i].height = (int)(Math.random() * SCALE_FACTOR + 1);
+            rectangles[i].width = (int)(Math.random() * SCALE_FACTOR + 1);
         }
 
         //Calculate average area
@@ -29,5 +29,5 @@ public class RectangleTester {
 
         System.out.println("The average rectangle area is " + averageArea);
     }
-    
+
 }
